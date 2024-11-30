@@ -1,0 +1,164 @@
+
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background for the entire page */
+    color: #e0e0e0; /* Light text color */
+    overflow: hidden; /* Remove scrollbars from the entire page */
+  }
+  
+  /* Main container for layout */
+  .main-container {
+    display: flex;
+    min-height: 100vh;
+    padding: 20px;
+    gap: 20px;
+    box-sizing: border-box;
+    background-color: #121212; /* Ensures background is black */
+  }
+  
+  /* Left-side options bar */
+  .options-container {
+    width: 300px;
+    background-color: #2b2b2b; /* Darker shade for options container */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    max-height: 70vh; /* Reduce height */
+    overflow-y: auto; /* Allow scrolling if needed */
+  }
+  
+  /* Text labels above options */
+  .option-label {
+    color: #d1a0ff; /* Violet color for labels */
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  /* Text boxes inside options container */
+  .options-container input, .options-container textarea, .options-container select {
+    width: 100%;
+    padding: 10px;
+    background-color: #383535;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    font-size: 16px; /* Increased font size */
+    box-sizing: border-box;
+  }
+  
+  /* Story output container */
+  .story-output-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    padding: 20px;
+    background-color: #2b2b2b; /* Dark background for story output */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    height: 70vh; /* Fixed height for the container */
+    position: relative; /* For positioning the copy button */
+  }
+  
+  /* Story output box */
+  .story-output {
+    width: 100%;
+    max-width: 1000px; /* Increased maximum width */
+    max-height: 100%;
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #383535; /* Slightly lighter dark background for story output */
+    color: #fff; /* White text color */
+    height: 65vh;
+    border-radius: 40px;
+    font-size: 18px; /* Increased font size for the generated story */
+    line-height: 1.6; /* Add some spacing between lines */
+  }
+  
+  /* Modern scrollbar for story output */
+  .story-output::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .story-output::-webkit-scrollbar-thumb {
+    background-color: #d1a0ff; /* Violet scrollbar thumb */
+    border-radius: 10px;
+  }
+  
+  .story-output::-webkit-scrollbar-track {
+    background-color: #383535; /* Darker track for scrollbar */
+  }
+  
+  /* Bottom section for prompt and buttons */
+  .prompt-upload-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    gap: 20px;
+  }
+  
+  /* Prompt text area */
+  .prompt-textarea {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #383535;
+    color: #e0e0e0;
+    box-sizing: border-box;
+    resize: vertical;
+    font-size: 18px; /* Increased font size */
+    min-height: 40px; /* Minimum height for the prompt bar */
+    max-height: 100px; /* Maximum height for prompt bar */
+    overflow-y: auto; /* Scroll when exceeding max height */
+  }
+  
+  /* Upload and Generate buttons */
+  .upload-button, .generate-button {
+    background-color: #7d31a0; /* Darker red for buttons */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 10px; /* Spacing between upload and generate buttons */
+  }
+  
+  .upload-button:hover, .generate-button:hover {
+    background-color: #4a1fcc; /* Lighter red on hover */
+    box-shadow: 0 4px 8px rgba(100, 33, 214, 0.5); /* Slight shadow on hover */
+  }
+  
+  /* Copy button */
+  .copy-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: #e218c7; /* Darker red for button */
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .copy-button:hover {
+    background-color: #0c88a4; /* Lighter red on hover */
+  }
+  

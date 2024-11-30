@@ -1,0 +1,175 @@
+
+
+
+
+   /* Basic styling for the whole page */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-y: auto; /* Enable vertical scroll */
+    scroll-behavior: smooth; /* Smooth scrolling */
+  }
+  
+  /* Custom scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #555; /* Scrollbar thumb color */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #333; /* Darker color when hovered */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f0f0f0; 
+    border-radius: 10px;
+  }
+  
+  body {
+    scrollbar-width: thin; 
+    scrollbar-color: #555 #f0f0f0; 
+  }
+  
+  
+  .about-us-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../assets/backg2.jpeg') no-repeat center center/cover;
+    z-index: -1;
+    opacity: 0.3;
+  }
+  
+  /* General content styling */
+  .content {
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Heading styles */
+  .main-heading, .team-heading {
+    font-size: 2.5rem;
+    margin: 30px 0;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .main-heading::before, .team-heading::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    height: 4px;
+    width: 50%;
+    background-color: #FFD700;
+    animation: heading-underline 1s ease-out;
+  }
+  
+  @keyframes heading-underline {
+    from {
+      width: 0;
+    }
+    to {
+      width: 50%;
+    }
+  }
+  
+  /* Project cards styling */
+  .project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 40px;
+  }
+  
+  .project-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    flex-basis: 30%;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Team members section styling */
+  .team-container {
+    margin: 50px 0;
+  }
+  
+  .team-heading {
+    font-size: 2.5rem;
+    margin: 50px 0 30px;
+    color: #FFD700;
+  }
+  
+  .team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+  }
+  
+  .team-card {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    animation: fadeInUp 1s forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .team-details {
+    color: #ffffff;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+  
